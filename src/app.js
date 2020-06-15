@@ -534,10 +534,11 @@ app.listen(3000, ()=>{
 ///////////////////////////////////////////////////
 // Git
 // version control
-// sequence
+// sequence of command
 // git init
 // Git status (need to ignore the node_modules, make new file name .gitignore then inside write node_modules/ )
 // Git add src/ or Git add . or git add *.*
+// Git commit -m "First commit"
 
 
 
