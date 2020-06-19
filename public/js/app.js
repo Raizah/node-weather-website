@@ -42,8 +42,9 @@ weatherForm.addEventListener('submit', (e) =>{ // assign parameter in event obje
     longitudeValue.textContent = '';
     latitudeValue.textContent = '';
 
+    // 'http://localhost:3000/weather?address='
 
-    fetch('http://localhost:3000/weather?address=' + place ).then((response) => {
+    fetch('/weather?address=' + place ).then((response) => {
     response.json().then((data) => {
         if(data.error) {
             // console.log(data.error);
