@@ -30,6 +30,7 @@ const search = document.querySelector('input');
 const weatherValue = document.querySelector('.weatherValue')
 const longitudeValue = document.querySelector('.longitudeValue')
 const latitudeValue = document.querySelector('.latitudeValue')
+const forecastValue = document.querySelector('.forecastValue');
 
 weatherForm.addEventListener('submit', (e) =>{ // assign parameter in event object in callback funciton as e
    
@@ -39,6 +40,7 @@ weatherForm.addEventListener('submit', (e) =>{ // assign parameter in event obje
     // console.log(place)
 
     weatherValue.textContent = 'Loading...'
+    forecastValue.textContent = ''
     longitudeValue.textContent = '';
     latitudeValue.textContent = '';
 
@@ -48,15 +50,16 @@ weatherForm.addEventListener('submit', (e) =>{ // assign parameter in event obje
     response.json().then((data) => {
         if(data.error) {
             // console.log(data.error);
-            weatherValue.textContent = "Type address";
+            weatherValue.textContent = "Type location";
 
         } else {
-            console.log(data.location);
-            console.log(data.forecast);
-            console.log(data.longitude);
-            console.log(data.latitude);
-            // weatherValue.textContent = data.location;
+            // console.log(data.location);
+            // console.log(data.forecast);
+            // console.log(data.longitude);
+            // console.log(data.latitude);
+            
             weatherValue.textContent = 'Address: ' + data.location
+            forecastValue.textContent = data.forecast
             longitudeValue.textContent = 'Longitude = ' + data.longitude
             latitudeValue.textContent = 'Latitude = ' + data.latitude
         }
