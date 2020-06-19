@@ -16,6 +16,7 @@ const forecast = (location, latitude, longitude, callback) => {
             callback('Unable to find location', undefined)
         } else {
             // callback(undefined, body.daily.data[0].summary + ' It is currently ' + body.currently.temperature + ' degress out. There is a ' + body.currently.precipProbability + '% chance of rain.')
+            // var now, year, month, day, months;
             // now = new Date(Number("/Date(1460008501597)/".replace(/\D/g, '')));
             // month = now.getMonth() + 1;
             // day = now.getDate();
@@ -28,9 +29,9 @@ const forecast = (location, latitude, longitude, callback) => {
                 // Street: body.features[0].text,
                 // Location: body.features[0].place_name,
                 // location: body.features[0].place_name
-              'Observation time @ ' + body.current.observation_time + ', temperature ' + body.current.temperature + ' degrees' + ', it is currently ' + body.current.weather_descriptions[0] + ', humidity is ' + body.current.humidity 
+              'Observation time @ ' + body.current.observation_time + ', temperature ' + body.current.temperature + ' degrees out' + ', it is currently ' + body.current.weather_descriptions[0] + ', humidity is ' + body.current.humidity + '%' 
             )
-            var now, year, month, day, months;
+            
 
      
             // console.log('Sunrise: '+ body.forecast.(does.date)
