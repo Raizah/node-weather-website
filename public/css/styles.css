@@ -106,3 +106,7 @@ button {
     background: #888888;
     padding: 8px;
 }
+
+.address {
+    margin-top: 10px !important;
+}
